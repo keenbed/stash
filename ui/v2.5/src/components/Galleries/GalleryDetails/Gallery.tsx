@@ -19,6 +19,7 @@ import { OrganizedButton } from "src/components/Scenes/SceneDetails/OrganizedBut
 import { Counter } from "src/components/Shared/Counter";
 import { ErrorMessage } from "src/components/Shared/ErrorMessage";
 import { Icon } from "src/components/Shared/Icon";
+import StashImage from "src/components/Shared/Image";
 import { LoadingIndicator } from "src/components/Shared/LoadingIndicator";
 import { RatingSystem } from "src/components/Shared/Rating/RatingSystem";
 import { TruncatedText } from "src/components/Shared/TruncatedText";
@@ -381,7 +382,7 @@ export const GalleryPage: React.FC<IProps> = ({ gallery, add }) => {
             {gallery.studio && (
               <h1 className="text-center gallery-studio-image">
                 <Link to={`/studios/${gallery.studio.id}`}>
-                  <img
+                  <StashImage
                     src={gallery.studio.image_path ?? ""}
                     alt={`${gallery.studio.name} logo`}
                     className="studio-logo"

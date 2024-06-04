@@ -11,6 +11,7 @@ import { OrganizedButton } from "src/components/Scenes/SceneDetails/OrganizedBut
 import { Counter } from "src/components/Shared/Counter";
 import { ErrorMessage } from "src/components/Shared/ErrorMessage";
 import { Icon } from "src/components/Shared/Icon";
+import StashImage from "src/components/Shared/Image";
 import { LoadingIndicator } from "src/components/Shared/LoadingIndicator";
 import { RatingSystem } from "src/components/Shared/Rating/RatingSystem";
 import { TruncatedText } from "src/components/Shared/TruncatedText";
@@ -315,7 +316,7 @@ const ImagePage: React.FC<IProps> = ({ image }) => {
             {image.studio && (
               <h1 className="text-center image-studio-image">
                 <Link to={`/studios/${image.studio.id}`}>
-                  <img
+                  <StashImage
                     src={image.studio.image_path ?? ""}
                     alt={`${image.studio.name} logo`}
                     className="studio-logo"

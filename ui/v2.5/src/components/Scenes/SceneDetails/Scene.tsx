@@ -37,6 +37,7 @@ import {
 import { Counter } from "src/components/Shared/Counter";
 import { ErrorMessage } from "src/components/Shared/ErrorMessage";
 import { Icon } from "src/components/Shared/Icon";
+import StashImage from "src/components/Shared/Image";
 import { LoadingIndicator } from "src/components/Shared/LoadingIndicator";
 import { RatingSystem } from "src/components/Shared/Rating/RatingSystem";
 import { TruncatedText } from "src/components/Shared/TruncatedText";
@@ -590,7 +591,7 @@ const ScenePage: React.FC<IProps> = ({
             {scene.studio && (
               <h1 className="text-center scene-studio-image">
                 <Link to={`/studios/${scene.studio.id}`}>
-                  <img
+                  <StashImage
                     src={scene.studio.image_path ?? ""}
                     alt={`${scene.studio.name} logo`}
                     className="studio-logo"
